@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>macOS Aurora Simulator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* -------------------------- */
+/*   GLOBAL AURORA THEME      */
+/* -------------------------- */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro", sans-serif;
+    background: linear-gradient(135deg, #0b0f1c, #1b2342);
+    color: white;
+}
+
+/* Aurora Glow Shader */
+#aurora-glow {
+    position: absolute;
+    width: 200vmax;
+    height: 200vmax;
+    top: -50vmax;
+    left: -50vmax;
+    background: radial-gradient(circle at var(--mx) var(--my),
+        rgba(120,180,255,0.25), rgba(40,60,120,0.1), rgba(0,0,0,0));
+    filter: blur(80px);
+    pointer-events: none;
+    transition: background 0.2s ease-out;
+}
+
+/* -------------------------- */
+/*   DOCK                     */
+/* -------------------------- */
+#dock {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 10px 20px;
+    display: flex;
+    gap: 22px;
+}
+
+.dock-icon {
+    width: 55px;
+    height: 55px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+.dock-icon:hover {
+    transform: scale(1.35);
+}
+
+/* Pretty fake icons */
+#finder-icon { background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/33/Finder_Icon_macOS_Big_Sur.png'); }
+#safari-icon { background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/52/Safari_browser_logo.svg'); }
+#notes-icon  { background-image: url('https://upload.wikimedia.org/wik
