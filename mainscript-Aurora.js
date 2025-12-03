@@ -104,3 +104,5 @@ function openEdge(win) {
         </p>
     `;
 }
+if (app === "Firefox") openFirefox(win);
+if (app === "Edge") openEdge(win);
