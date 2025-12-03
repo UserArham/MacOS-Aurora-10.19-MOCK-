@@ -161,3 +161,27 @@ body {
 .desktop-btn.selected {
     background: rgba(255,255,255,0.35);
 }
+/* Browser Themes */
+.firefox-theme {
+    background: linear-gradient(180deg, #ff8c42, #d35400);
+}
+
+.edge-theme {
+    background: linear-gradient(180deg, #00c6ff, #0072ff);
+}
+
+.browser-bar {
+    background: rgba(0,0,0,0.45);
+    padding: 10px;
+    color: white;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.browser-url {
+    width: 90%;
+    padding: 7px 10px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255,255,255,0.25);
+    color: white;
+}
