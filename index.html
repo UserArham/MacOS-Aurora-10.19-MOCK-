@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>macOS Aurora — Desktop 1</title>
+<link rel="stylesheet" href="css/aurora.css">
+<script src="js/aurora.js" defer></script>
+</head>
+<body data-desktop="1">
+
+<div id="aurora-glow"></div>
+
+<!-- Desktop Wallpaper -->
+<div class="wallpaper" style="background-image:url('assets/wallpaper/aurora1.jpg');"></div>
+
+<!-- Top Menu Bar -->
+<div id="menubar">
+    <span class="menu-title"> macOS Aurora</span>
+    <span class="menu-right">
+        Desktop 1
+    </span>
+</div>
+
+<!-- Dock -->
+<div id="dock">
+    <img class="dock-icon" id="finder-icon"    src="assets/icons/finder.png"    onclick="openWindow('Finder')">
+    <img class="dock-icon" id="safari-icon"    src="assets/icons/safari.png"    onclick="openWindow('Safari')">
+    <img class="dock-icon" id="notes-icon"     src="assets/icons/notes.png"     onclick="openWindow('Notes')">
+    <img class="dock-icon" id="terminal-icon"  src="assets/icons/terminal.png"  onclick="openWindow('Terminal')">
+    <img class="dock-icon" id="launchpad-icon" src="assets/icons/launchpad.png" onclick="toggleLaunchpad()">
+</div>
+
+<!-- Control Center -->
+<div id="control-center">
+    <h3>Control Center</h3>
+    <p>Brightness</p>
+    <div class="slider"><div class="thumb"></div></div>
+</div>
+
+<!-- Launchpad -->
+<div id="launchpad">
+    <div class="lp-grid">
+        <div class="lp-item">Finder</div>
+        <div class="lp-item">Safari</div>
+        <div class="lp-item">Notes</div>
+        <div class="lp-item">Terminal</div>
+    </div>
+</div>
+
+<!-- Mission Control -->
+<div id="mission-control" onclick="closeMissionControl()">
+    <div id="mission-grid"></div>
+
+    <div class="desktop-buttons">
+        <a href="index.html" class="desktop-btn selected">Desktop 1</a>
+        <a href="desktop2.html" class="desktop-btn">Desktop 2</a>
+        <a href="desktop3.html" class="desktop-btn">Desktop 3</a>
+    </div>
+</div>
+
+</body>
+</html>
