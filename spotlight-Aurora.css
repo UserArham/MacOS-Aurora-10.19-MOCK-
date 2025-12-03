@@ -21,3 +21,21 @@
     color: white;
     font-size: 20px;
 }
+#safari-horizon-tabs {
+    display: flex;
+    gap: 14px;
+    transform-style: preserve-3d;
+    margin-bottom: 20px;
+}
+
+.horizon-tab {
+    padding: 8px 16px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 10px;
+    transform: rotateX(18deg) rotateY(-15deg);
+    transition: 0.2s;
+}
+
+.horizon-tab:hover {
+    transform: rotateX(0deg) rotateY(0deg) scale(1.2);
+}
