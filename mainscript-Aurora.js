@@ -106,3 +106,33 @@ function openEdge(win) {
 }
 if (app === "Firefox") openFirefox(win);
 if (app === "Edge") openEdge(win);
+/* Snap Layouts (Windows-style) */
+document.addEventListener("mouseup", () => {
+    document.querySelectorAll(".window").forEach(w => {
+        const r = w.getBoundingClientRect();
+
+        // Snap to top (maximize)
+        if (r.top < 10) {
+            w.style.top = "0";
+            w.style.left = "0";
+            w.style.width = window.innerWidth + "px";
+            w.style.height = window.innerHeight + "px";
+        }
+
+        // Snap Left
+        if (r.left < 10) {
+            w.style.top = "0";
+            w.style.left = "0";
+            w.style.width = "50vw";
+            w.style.height = "100vh";
+        }
+
+        // Snap Right
+        if (r.right > window.innerWidth - 10) {
+            w.style.top = "0";
+            w.style.left = "50vw";
+            w.style.width = "50vw";
+            w.style.height = "100vh";
+        }
+    });
+});
