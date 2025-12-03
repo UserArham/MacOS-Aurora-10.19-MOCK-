@@ -185,3 +185,17 @@ body {
     background: rgba(255,255,255,0.25);
     color: white;
 }
+/* Chrome */
+.chrome-theme {
+    background: linear-gradient(180deg, #4285F4, #0F62FE);
+}
+
+/* Opera */
+.opera-theme {
+    background: linear-gradient(180deg, #FF1B2D, #C7002B);
+}
+
+/* Brave */
+.brave-theme {
+    background: linear-gradient(180deg, #FB542B, #C63D00);
+}
