@@ -78,3 +78,29 @@ function openMissionControl() {
 function closeMissionControl() {
     document.getElementById("mission-control").style.display = "none";
 }
+function openFirefox(win) {
+    const c = win.querySelector(".window-inner");
+
+    win.classList.add("firefox-theme");
+
+    c.innerHTML = `
+        <div class="browser-bar">Mozilla Firefox</div>
+        <input class="browser-url" placeholder="Search with Firefox">
+        <p style="color:white; padding:10px;">
+            This is a simulated version of Firefox inside macOS Aurora.
+        </p>
+    `;
+}
+function openEdge(win) {
+    const c = win.querySelector(".window-inner");
+
+    win.classList.add("edge-theme");
+
+    c.innerHTML = `
+        <div class="browser-bar">Microsoft Edge</div>
+        <input class="browser-url" placeholder="Search or enter URL">
+        <p style="color:white; padding:10px;">
+            This is a simulated version of Microsoft Edge inside macOS Aurora.
+        </p>
+    `;
+}
