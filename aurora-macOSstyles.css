@@ -1,0 +1,163 @@
+/* GLOBAL */
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro", sans-serif;
+}
+
+/* Aurora Glow */
+#aurora-glow {
+    position: fixed;
+    width: 200vmax;
+    height: 200vmax;
+    top: -50vmax;
+    left: -50vmax;
+    background: radial-gradient(circle at var(--mx) var(--my),
+        rgba(120,180,255,0.25),
+        rgba(40,60,120,0.1),
+        rgba(0,0,0,0));
+    pointer-events: none;
+    filter: blur(90px);
+    transition: 0.15s;
+}
+
+/* Wallpaper */
+.wallpaper {
+    position: fixed;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Menu Bar */
+#menubar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 28px;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(20px);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 10px;
+}
+
+/* Dock */
+#dock {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,0.22);
+    backdrop-filter: blur(20px);
+    padding: 12px 22px;
+    border-radius: 18px;
+    display: flex;
+    gap: 22px;
+}
+
+.dock-icon {
+    width: 57px;
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+
+.dock-icon:hover {
+    transform: scale(1.35);
+}
+
+/* Windows */
+.window {
+    position: absolute;
+    width: 450px;
+    height: 320px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(25px);
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,255,255,0.2);
+    resize: both;
+    overflow: hidden;
+}
+
+.titlebar {
+    height: 32px;
+    background: rgba(255,255,255,0.2);
+    padding: 4px 12px;
+    display: flex;
+    align-items: center;
+    cursor: grab;
+}
+
+.btn {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+
+.close { background:#ff5f57; }
+.minimize { background:#ffbd2e; }
+.zoom { background:#28c840; }
+
+/* Launchpad */
+#launchpad {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(20px);
+    display: none;
+}
+
+.lp-grid {
+    margin-top: 120px;
+    display: grid;
+    grid-template-columns: repeat(6, 120px);
+    justify-content: center;
+    gap: 40px;
+}
+
+.lp-item {
+    color: white;
+    font-size: 22px;
+    text-align: center;
+}
+
+/* Mission Control */
+#mission-control {
+    position: fixed;
+    inset: 0;
+    display: none;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(20px);
+}
+
+#mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 320px);
+    gap: 25px;
+    padding: 80px;
+}
+
+/* Desktop Switch Buttons */
+.desktop-buttons {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.desktop-btn {
+    color: white;
+    padding: 12px 20px;
+    margin: 0 8px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.desktop-btn.selected {
+    background: rgba(255,255,255,0.35);
+}
