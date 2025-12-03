@@ -1,0 +1,23 @@
+#spotlight {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 480px;
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(30px);
+    padding: 20px;
+    border-radius: 18px;
+    display: none;
+    flex-direction: column;
+}
+
+#spot-input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    background: rgba(0,0,0,0.4);
+    color: white;
+    font-size: 20px;
+}
