@@ -134,5 +134,47 @@ document.addEventListener("mouseup", () => {
             w.style.width = "50vw";
             w.style.height = "100vh";
         }
-    });
+    }function openChrome(win) {
+    const c = win.querySelector(".window-inner");
+
+    win.classList.add("chrome-theme");
+
+    c.innerHTML = `
+        <div class="browser-bar">Google Chrome</div>
+        <input class="browser-url" placeholder="Search or enter URL">
+        <p style="color:white; padding:10px;">
+            This is a simulated Chrome window for macOS Aurora.
+        </p>
+    `;
+}
+function openOpera(win) {
+    const c = win.querySelector(".window-inner");
+
+    win.classList.add("opera-theme");
+
+    c.innerHTML = `
+        <div class="browser-bar">Opera</div>
+        <input class="browser-url" placeholder="Search or enter URL">
+        <p style="color:white; padding:10px;">
+            This is a simulated Opera window for macOS Aurora.
+        </p>
+    `;
+}
+function openBrave(win) {
+    const c = win.querySelector(".window-inner");
+
+    win.classList.add("brave-theme");
+
+    c.innerHTML = `
+        <div class="browser-bar">Brave</div>
+        <input class="browser-url" placeholder="Search or enter URL">
+        <p style="color:white; padding:10px;">
+            This is a simulated Brave browser window for macOS Aurora.
+        </p>
+    `;
+}
+if (app === "Chrome") openChrome(win);
+if (app === "Opera") openOpera(win);
+if (app === "Brave") openBrave(win);
+
 });
